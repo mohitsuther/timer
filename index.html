@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100%;
+
+        }
+
+        .box {
+            height: 80vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: aliceblue;
+
+        }
+        #displaytime{
+            position: absolute;
+            top: 140px;
+            
+            left: 25%;
+            font-size: 3rem;
+        }
+        .timer{
+            height: 200px;
+            width: 200px;
+            display: flex;
+            box-sizing: content-box;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        button {
+            margin: 20px;
+        }
+        .lap{
+            height: 500px;
+            width: 200px;
+            display: grid;
+            grid-template-columns: 100px 100px;
+            margin-top: 100px;
+            overflow: hidden;
+            margin-inline: auto;
+            overflow-y: scroll ;
+            color: aliceblue;
+            scroll-behavior: auto;
+            
+        }
+        .lap::-webkit-scrollbar{
+            display: none;
+        }
+        .a,.b,.c{
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-sm container bg-dark">
+        <div class="box">
+            <div class="timer">
+                <h1 id="displaytime">00:00.00</h1>
+
+            </div>
+            <div class="lap">
+                <div class="a"><h5>Lap</h5>
+                </div>
+                <!-- <div class="b" value=""><h5>Lap Time</h5></div> -->
+                <div class="c"><h5>Over Time</h5></div>
+            </div>
+            <div class="bt">
+
+                <button type="button" onclick="lap(); " class="btn btn-outline-secondary  ">Lap</button>
+                <button type="button" onclick=" start();" class="btn btn-outline-secondary st ">start</button>
+                <button type="button" onclick=" stops()" class="btn btn-outline-secondary re">stop</button>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous">
+    </script> -->
+   <script src="script.js"></script>
+       
+
+</body>
+</html>
